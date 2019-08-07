@@ -9,6 +9,9 @@ use warnings;
 $usr='';
 $pwd='';
 
+# 图片下载路径
+$url='![](https://raw.githubusercontent.com/zongf0504/blog-images/master/images/xxx.png)';
+
 #设置默认命令
 $expect = "expect";
 
@@ -22,4 +25,5 @@ $cmd = "$expect -c 'spawn git push origin master\n"
       ."'";
 
 # 执行命令
-exec "$cmd";
+exec "$cmd && echo '$url'";
+
